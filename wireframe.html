@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background-color: #2a2a2a;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #1f1f1f;
+            padding: 24px 16px;
+            border-radius: 16px;
+            margin: 16px;
+            margin-right: 0;
+        }
+
+        .menu-item {
+            width: 100%;
+            height: 32px;
+            background-color: #3a3a3a;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .menu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .content-section {
+            background-color: #1f1f1f;
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .content-section.large {
+            grid-column: 1 / -1;
+        }
+
+        .content-section.tall {
+            grid-row: span 2;
+        }
+
+        .user-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #666;
+            border-radius: 50%;
+            position: relative;
+            margin: 16px 0;
+        }
+
+        .user-icon::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #999;
+            border-radius: 50%;
+        }
+
+        .user-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 16px;
+            background-color: #999;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .content-bar {
+            width: 100%;
+            height: 12px;
+            background-color: #3a3a3a;
+            border-radius: 6px;
+            margin: 8px 0;
+        }
+
+        .content-bar.short {
+            width: 60%;
+        }
+
+        .content-bar.medium {
+            width: 80%;
+        }
+
+        .grid-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            height: 100%;
+        }
+
+        .grid-item {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-section {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .nav-item {
+            width: 120px;
+            height: 32px;
+            background-color: #3a3a3a;
+            border-radius: 16px;
+        }
+
+        .nav-item.active {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="content-section large">
+                <div class="top-section">
+                    <div class="nav-item active"></div>
+                    <div class="nav-item"></div>
+                </div>
+                <div class="content-bar"></div>
+                <div class="content-bar medium"></div>
+                <div class="content-bar short"></div>
+            </div>
+            
+            <div class="content-section">
+                <div class="user-icon"></div>
+                <div class="content-bar"></div>
+                <div class="content-bar short"></div>
+            </div>
+            
+            <div class="content-section tall">
+                <div class="grid-section">
+                    <div class="grid-item">
+                        <div class="user-icon"></div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="user-icon"></div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="user-icon"></div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="user-icon"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="user-icon"></div>
+                <div class="content-bar"></div>
+                <div class="content-bar medium"></div>
+            </div>
+            
+            <div class="content-section">
+                <div class="user-icon"></div>
+                <div class="content-bar"></div>
+                <div class="content-bar short"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
